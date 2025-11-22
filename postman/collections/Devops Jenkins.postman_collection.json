@@ -1,0 +1,52 @@
+{
+  "info": {
+    "_postman_id": "c10cb8d2-1d71-48c7-8e9e-16acb153496b",
+    "name": "Devops Jenkins",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "18396671"
+  },
+  "item": [
+    {
+      "name": "jenkinsPipelineCreate",
+      "id": "333abfaa-1604-4430-aea8-da4eaa791170",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "text/xml",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "file",
+          "file": {
+            "src": "/D:/cob2java/CONTAINERIZATION/DEVOPS/configjava.xml"
+          }
+        },
+        "url": {
+          "raw": "http://admin:11f1a27000e64b5e8ea4f4dbd7cbd7f994@localhost:9898/createItem?name=testpipeline",
+          "protocol": "http",
+          "auth": {
+            "user": "admin",
+            "password": "11f1a27000e64b5e8ea4f4dbd7cbd7f994"
+          },
+          "host": [
+            "localhost"
+          ],
+          "port": "9898",
+          "path": [
+            "createItem"
+          ],
+          "query": [
+            {
+              "key": "name",
+              "value": "testpipeline"
+            }
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

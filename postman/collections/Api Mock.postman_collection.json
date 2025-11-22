@@ -1,0 +1,118 @@
+{
+  "info": {
+    "_postman_id": "b3dcf87e-4b13-4f4b-913e-d5df9afd7888",
+    "name": "Api Mock",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "18396671"
+  },
+  "item": [
+    {
+      "name": "check",
+      "id": "e71e57e2-91b2-4e36-b1d5-2f533aeb8973",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "url": {
+          "raw": "{{url}}/check",
+          "host": [
+            "{{url}}"
+          ],
+          "path": [
+            "check"
+          ]
+        }
+      },
+      "response": [
+        {
+          "id": "d3e740a6-8ddb-4bb4-9475-5f93a3057703",
+          "name": "Default",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "{{url}}/check",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "check"
+              ]
+            }
+          },
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": null,
+          "cookie": [],
+          "body": ""
+        }
+      ]
+    },
+    {
+      "name": "refineCode",
+      "id": "c1e15cd3-9a45-4a57-84c4-37284e692c08",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "url": {
+          "raw": "{{url}}/refineCode",
+          "host": [
+            "{{url}}"
+          ],
+          "path": [
+            "refineCode"
+          ]
+        }
+      },
+      "response": [
+        {
+          "id": "2b37b68a-616d-4db7-90fa-ab955998cb8a",
+          "name": "Default",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "{{url}}/refineCode",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "refineCode"
+              ]
+            }
+          },
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": null,
+          "cookie": [],
+          "body": ""
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "id": "517f5fc5-eccb-448e-a306-518f88e1967b",
+      "key": "url",
+      "value": "https://b60da54b-23f4-4c2b-8190-fb9c2bdcf1c3.mock.pstmn.io"
+    }
+  ]
+}

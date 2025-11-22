@@ -1,0 +1,17 @@
+{
+  "workspace": {
+    "id": "3aec3a67-2afd-499c-8147-791abf0bf385"
+  },
+  "entities": {
+    "collections": [
+      "..\\postman\\collections\\BlueScript Codex.postman_collection.json",
+      "..\\postman\\collections\\Devops Jenkins.postman_collection.json",
+      "..\\postman\\collections\\Api Mock.postman_collection.json",
+      "..\\postman\\collections\\Authorization methods.postman_collection.json"
+    ],
+    "environments": [],
+    "specs": [],
+    "flows": [],
+    "globals": []
+  }
+}

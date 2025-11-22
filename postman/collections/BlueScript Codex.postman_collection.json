@@ -1,0 +1,1406 @@
+{
+  "info": {
+    "_postman_id": "fa8d787a-847f-49bb-9f67-e34822e8a9bb",
+    "name": "BlueScript Codex",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "18396671"
+  },
+  "item": [
+    {
+      "name": "Codex API Orchestrator",
+      "id": "116b5883-4667-433c-a891-186f4db51fe6",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "inputPath",
+              "value": "D:\\BLUESCRIPT_DEMO\\End-2-EndTestData\\CodeConversionDemoInput",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://runpod.bluescript.ai:3018/processData",
+          "protocol": "http",
+          "host": [
+            "runpod",
+            "bluescript",
+            "ai"
+          ],
+          "port": "3018",
+          "path": [
+            "processData"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Mock server Test",
+      "id": "39626bca-4d93-4749-9150-325a4f7ca49e",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "graphql",
+          "graphql": {
+            "query": "",
+            "variables": ""
+          }
+        },
+        "url": {
+          "raw": "http://localhost:9090/mock",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "9090",
+          "path": [
+            "mock"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "LgiCus01",
+      "id": "1b0d7c26-7494-46a7-8ba3-ce743ae1cb8c",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{ \"caRequestId\" : \"R1001\",\r\n    \"caReturnCode\" :\"\",\r\n    \"caCustomerNum\" :\"98989\",\r\n   \"caRequestSpecific\" :\"FristTest post \"\r\n    }",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/lgi",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "lgi"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "https://bp01x94etxnxkx-11434.proxy.runpod.net/api/embeddings",
+      "id": "705fa206-edcb-41e7-8886-249b38670ccd",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"model\": \"nomic-embed-text\", \"prompt\": \"The sky is blue because of Rayleigh scattering\"}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://bp01x94etxnxkx-11434.proxy.runpod.net/api/embeddings",
+          "protocol": "https",
+          "host": [
+            "bp01x94etxnxkx-11434",
+            "proxy",
+            "runpod",
+            "net"
+          ],
+          "path": [
+            "api",
+            "embeddings"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Preprocessor API",
+      "id": "fcd0079d-e1dc-4f3e-98eb-57e0d935b70b",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "file",
+              "type": "file",
+              "src": "/D:/BLUESCRIPT_DEMO/End-2-EndTestData/CobolPgm/TESTJF102/TESTJF102.CBL",
+              "disabled": true
+            },
+            {
+              "key": "file",
+              "type": "file",
+              "src": "/D:/BLUESCRIPT_DEMO/End-2-EndTestData/CobolPgm/MoveTest/TESTMOVES_V3.cbl",
+              "disabled": true
+            },
+            {
+              "key": "workingDir",
+              "value": "D:\\BLUESCRIPT_DEMO\\End-2-EndTestData\\IntrimData\\WorkingDir\\PL2",
+              "type": "text"
+            },
+            {
+              "key": "file",
+              "type": "file",
+              "src": "/D:/BLUESCRIPT_DEMO/IBM POC/cics-genapp-main1/cics-genapp-main/base/src/lgacdb01.cbl",
+              "disabled": true
+            },
+            {
+              "key": "file",
+              "type": "file",
+              "src": "/D:/BLUESCRIPT_DEMO/End-2-EndTestData/CobolPgm/aws-mainframe-modernization-carddemo-main/app/batch/CBTRN03C_TEST.cbl",
+              "disabled": true
+            },
+            {
+              "key": "file",
+              "type": "file",
+              "src": "/D:/BLUESCRIPT_DEMO/IBM POC/cics-genapp-main1/cics-genapp-main/base/src/lgacdb02.cbl",
+              "disabled": true
+            },
+            {
+              "key": "file",
+              "type": "file",
+              "src": "/D:/BLUESCRIPT_DEMO/IBM POC/cics-genapp-main1/cics-genapp-main/base/src/lgacus01.cbl",
+              "disabled": true
+            },
+            {
+              "key": "file",
+              "type": "file",
+              "src": "/D:/BLUESCRIPT_DEMO/IBM POC/cics-genapp-main1/cics-genapp-main/base/src/lgupvs01.cbl",
+              "disabled": true
+            },
+            {
+              "key": "file",
+              "type": "file",
+              "src": "/D:/BLUESCRIPT_DEMO/IBM POC/cics-genapp-main1/cics-genapp-main/base/src/lgacvs01.cbl",
+              "disabled": true
+            },
+            {
+              "key": "file",
+              "type": "file",
+              "src": "/D:/BLUESCRIPT_DEMO/IBM POC/cics-genapp-main1/cics-genapp-main/base/src/lgapdb01.cbl",
+              "disabled": true
+            },
+            {
+              "key": "file",
+              "type": "file",
+              "src": "/D:/BLUESCRIPT_DEMO/IBM POC/cics-genapp-main1/cics-genapp-main/base/src/lgicvs01.cbl",
+              "disabled": true
+            },
+            {
+              "key": "file",
+              "type": "file",
+              "src": "/D:/BLUESCRIPT_DEMO/End-2-EndTestData/IBM Sourcecode/source/lgaaowk.CBL"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:5500/Preprocessor",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5500",
+          "path": [
+            "Preprocessor"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "BorgCube API",
+      "id": "8fae7560-c3ce-4ff2-b8ec-6bbc5dac07fb",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5002/borgcube-1/?convdir=D:\\BLUESCRIPT_DEMO\\End-2-EndTestData\\IntrimData\\WorkingDir\\PL2\\lgaaowk&discoveryDB=D:\\BLUESCRIPT_DEMO\\End-2-EndTestData\\IntrimData\\WorkingDir\\PL1\\GenApp_WithLatestChanges_GenAPP.db",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5002",
+          "path": [
+            "borgcube-1",
+            ""
+          ],
+          "query": [
+            {
+              "key": "convdir",
+              "value": "D:\\BLUESCRIPT_DEMO\\End-2-EndTestData\\IntrimData\\PL1\\COACTUPC",
+              "disabled": true
+            },
+            {
+              "key": "convdir",
+              "value": "D:\\BLUESCRIPT_DEMO\\End-2-EndTestData\\IntrimData\\PL1\\TESTCICS",
+              "disabled": true
+            },
+            {
+              "key": "convdir",
+              "value": "D:\\BLUESCRIPT_DEMO\\End-2-EndTestData\\IntrimData\\PL1\\TESTJF102",
+              "disabled": true
+            },
+            {
+              "key": "convdir",
+              "value": "D%3A%5CBLUESCRIPT_DEMO%5CEnd-2-EndTestData%5CIntrimData%5CPL1%5CCBACT04C",
+              "disabled": true
+            },
+            {
+              "key": "convdir",
+              "value": "D:\\BLUESCRIPT_DEMO\\End-2-EndTestData\\IntrimData\\PL1\\TESTMOVES_V3",
+              "disabled": true
+            },
+            {
+              "key": "convdir",
+              "value": "D:\\BLUESCRIPT_DEMO\\End-2-EndTestData\\IntrimData\\WorkingDir\\CBTRN02C",
+              "disabled": true
+            },
+            {
+              "key": "convdir",
+              "value": "D:\\BLUESCRIPT_DEMO\\End-2-EndTestData\\IntrimData\\WorkingDir\\CBTRN03C",
+              "disabled": true
+            },
+            {
+              "key": "convdir",
+              "value": "D:\\BLUESCRIPT_DEMO\\End-2-EndTestData\\IntrimData\\WorkingDir\\CoactvwcIfTest",
+              "disabled": true
+            },
+            {
+              "key": "convdir",
+              "value": "D:\\BLUESCRIPT_DEMO\\End-2-EndTestData\\IntrimData\\WorkingDir\\lgacdb01",
+              "disabled": true
+            },
+            {
+              "key": "convdir",
+              "value": "D:\\BLUESCRIPT_DEMO\\End-2-EndTestData\\IntrimData\\WorkingDir\\PL2\\lgaaowk"
+            },
+            {
+              "key": "discoveryDB",
+              "value": "D:\\BLUESCRIPT_DEMO\\End-2-EndTestData\\IntrimData\\WorkingDir\\PL1\\GenApp_WithLatestChanges_GenAPP.db"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "sbtcreator api",
+      "id": "e7804a07-d028-44bf-8912-08ea5236c1a3",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3017/sbtcreate?outputdir=D:\\BLUESCRIPT_DEMO\\End-2-EndTestData\\MartinDemo&dir=D:\\BLUESCRIPT_DEMO\\End-2-EndTestData\\IntrimData\\WorkingDir\\PL2\\TESTJF10",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3017",
+          "path": [
+            "sbtcreate"
+          ],
+          "query": [
+            {
+              "key": "dir",
+              "value": "D:\\BLUESCRIPT_DEMO\\End-2-EndTestData\\IntrimData\\PL1\\TESTMOVES_V3",
+              "disabled": true
+            },
+            {
+              "key": "dir",
+              "value": "D%3A%5CBLUESCRIPT_DEMO%5CEnd-2-EndTestData%5CIntrimData%5CPL1%5CCBACT04C",
+              "disabled": true
+            },
+            {
+              "key": "dir",
+              "value": "D:\\BLUESCRIPT_DEMO\\End-2-EndTestData\\IntrimData\\WorkingDir\\PL1\\KTMEO54",
+              "disabled": true
+            },
+            {
+              "key": "outputdir",
+              "value": "D:\\BLUESCRIPT_DEMO\\End-2-EndTestData\\MartinDemo"
+            },
+            {
+              "key": "outputdir",
+              "value": "D:\\BLUESCRIPT_DEMO\\End-2-EndTestData\\Checking",
+              "disabled": true
+            },
+            {
+              "key": "dir",
+              "value": "D:\\BLUESCRIPT_DEMO\\End-2-EndTestData\\IntrimData\\WorkingDir\\PL2\\KNBS4001",
+              "disabled": true
+            },
+            {
+              "key": "dir",
+              "value": "D:\\BLUESCRIPT_DEMO\\End-2-EndTestData\\IntrimData\\WorkingDir\\PL2\\KNBAC010",
+              "disabled": true
+            },
+            {
+              "key": "dir",
+              "value": "D:\\BLUESCRIPT_DEMO\\End-2-EndTestData\\IntrimData\\WorkingDir\\PL1\\Knhnva2",
+              "disabled": true
+            },
+            {
+              "key": "dir",
+              "value": "D:\\BLUESCRIPT_DEMO\\End-2-EndTestData\\IntrimData\\WorkingDir\\PL1\\KNHKO01",
+              "disabled": true
+            },
+            {
+              "key": "dir",
+              "value": "D:\\BLUESCRIPT_DEMO\\End-2-EndTestData\\IntrimData\\WorkingDir\\PL1\\KNPMK01",
+              "disabled": true
+            },
+            {
+              "key": "dir",
+              "value": "D:\\BLUESCRIPT_DEMO\\End-2-EndTestData\\IntrimData\\WorkingDir\\PL1\\KNPTP01",
+              "disabled": true
+            },
+            {
+              "key": "dir",
+              "value": "D:\\BLUESCRIPT_DEMO\\End-2-EndTestData\\IntrimData\\WorkingDir\\PL1\\KNHNVA2",
+              "disabled": true
+            },
+            {
+              "key": "dir",
+              "value": "D:\\BLUESCRIPT_DEMO\\End-2-EndTestData\\IntrimData\\WorkingDir\\PL1\\KNHASA1",
+              "disabled": true
+            },
+            {
+              "key": "dir",
+              "value": "D:\\BLUESCRIPT_DEMO\\End-2-EndTestData\\IntrimData\\WorkingDir\\PL2\\KNHNVA2",
+              "disabled": true
+            },
+            {
+              "key": "dir",
+              "value": "D:\\BLUESCRIPT_DEMO\\End-2-EndTestData\\IntrimData\\WorkingDir\\PL2\\TESTJF10"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "JavaASTRefiner",
+      "id": "c224def5-7435-49fd-9a2c-10fc557b3374",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:6000/JavaAstRefiner/?outputdir=D:\\BLUESCRIPT_DEMO\\End-2-EndTestData\\Checking&javaDir=D:\\BLUESCRIPT_DEMO\\End-2-EndTestData\\Checking\\KNBS4001_SBT",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "6000",
+          "path": [
+            "JavaAstRefiner",
+            ""
+          ],
+          "query": [
+            {
+              "key": "javaDir",
+              "value": "D:\\BLUESCRIPT_DEMO\\End-2-EndTestData\\Checking\\lgacdb01_SBT",
+              "disabled": true
+            },
+            {
+              "key": "javaDir",
+              "value": "D:\\BLUESCRIPT_DEMO\\End-2-EndTestData\\Checking\\TESTJF102_SBT",
+              "disabled": true
+            },
+            {
+              "key": "outputdir",
+              "value": "D:\\BLUESCRIPT_DEMO\\End-2-EndTestData\\Checking"
+            },
+            {
+              "key": "javaDir",
+              "value": "D:\\BLUESCRIPT_DEMO\\End-2-EndTestData\\Checking\\KNBS4001_SBT"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "OrchestratorApiEnd2End",
+      "id": "8c4ab4cc-d5d9-41d0-908e-48bcb714e22e",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "workingDir",
+              "value": "D:\\BLUESCRIPT_DEMO\\End-2-EndTestData\\IntrimData\\WorkingDir\\PL2",
+              "type": "text"
+            },
+            {
+              "key": "inputPath",
+              "value": "D:\\BLUESCRIPT_DEMO\\End-2-EndTestData\\IBM Sourcecode\\source",
+              "type": "text"
+            },
+            {
+              "key": "javaDir",
+              "value": "D:\\BLUESCRIPT_DEMO\\End-2-EndTestData\\Checking\\1_SunCor_Demo",
+              "type": "text"
+            },
+            {
+              "key": "discoveryDB",
+              "value": "D:\\BLUESCRIPT_DEMO\\End-2-EndTestData\\IntrimData\\WorkingDir\\PL1\\GenApp_WithLatestChanges_GenAPP.db",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://runpod.bluescript.ai:3018/processData",
+          "protocol": "http",
+          "host": [
+            "runpod",
+            "bluescript",
+            "ai"
+          ],
+          "port": "3018",
+          "path": [
+            "processData"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "AI generate",
+      "id": "519e308d-7dde-47e8-be74-f2fd3e21d127",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n            \"model\": \"bluescriptmodel:latest\",\r\n            \"prompt\": \"how call db2 ?\",\r\n            \"system\": \"Advanced COBOL programmer\",\r\n            \"stream\": false\r\n        }",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:11434/api/generate",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "11434",
+          "path": [
+            "api",
+            "generate"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "chromaDBAPI - airefactor",
+      "id": "ea97bf00-fc41-4b9f-b621-e8b41c08b583",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{ \"content\":\" public  String  cbact04CMainMethod()  {  \\n  log.debug(\\\"Method  cbact04CMainMethodstarted..\\\");  \\n  long  fdXrefAcctId  =  0;  \\n  int  fdDisTranCatCd  =  0;  \\n  String  fdDisTranTypeCd  =  \\\"\\\";  \\n  ;  \\n  \\n  log.info(\\\"start  of  execution  of  program  cbact04c\\\");  \\n  \\n  while  (endOfFile)  {  \\n  if  (endOfFile.equals(\\\"N\\\"))  {  \\n  \\n  if  (endOfFile.equals(\\\"N\\\"))  {  \\n  \\n  wsRecordCount  =  1  +  wsRecordCount;  \\n  \\n  ;  \\n  \\n  log.info(\\\"\\\",  tranCatBalRecord.toString());  \\n  \\n  if  (tranCatBalRecord.getTranCatKey().getTrancatAcctId()  !=  wsLastAcctNum)  {  \\n  \\n  if  (wsFirstTime  !=  \\\"Y\\\")  {  \\n  \\n  updateAccount();  \\n  \\n  }  else  {  \\n  wsFirstTime  =  \\\"N\\\";  \\n  \\n  }  \\n  wsTotalInt  =  0;  \\n  wsLastAcctNum  =  String.valueOf(tranCatBalRecord.getTranCatKey().getTrancatAcctId());  \\n  fdAcctId  =  tranCatBalRecord.getTranCatKey().getTrancatAcctId();  \\n  getAcctData(fdAcctId);  \\n  \\n  fdXrefAcctId  =  tranCatBalRecord.getTranCatKey().getTrancatAcctId();  \\n  \\n  }  \\n  fdDisAcctGroupId  =  accountRecord.getAcctGroupId();  \\n  fdDisTranCatCd  =  tranCatBalRecord.getTranCatKey().getTrancatCd();  \\n  fdDisTranTypeCd  =  tranCatBalRecord.getTranCatKey().getTrancatTypeCd();  \\n  getInterestRate();  \\n  \\n  if  (disGroupRecord.getDisIntRate()  !=  0)  {  \\n  \\n  computeInterest(disIntRate);  \\n  \\n  }  \\n  }  \\n  }  else  {  \\n  updateAccount();  \\n  \\n  }  \\n  }  \\n  log.info(\\\"end  of  execution  of  program  cbact04c\\\");  \\n  \\n  log.debug(\\\"Method  cbact04CMainMethod  completed..\\\");  \\n  \\n  return  \\\"Success\\\";  \\n  \\n  }  \\n   \",\r\n \"type\":\"javaMethodRefactor\"\r\n}\r\n ",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5858/airefactor",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5858",
+          "path": [
+            "airefactor"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "chromaDBAPI - loadDB",
+      "id": "7f00f262-968a-4be7-a625-7804d23fae89",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "collectionname",
+              "value": "pl1danskeremove",
+              "type": "text"
+            },
+            {
+              "key": "file",
+              "type": "file",
+              "src": "/D:/chromaDB/semanticSearchMapping_removeonly.csv",
+              "disabled": true
+            },
+            {
+              "key": "file",
+              "type": "file",
+              "src": "/D:/chromaDB/PL1_Semantic_IndividualStatements_Load_V1.0.csv",
+              "disabled": true
+            },
+            {
+              "key": "file",
+              "type": "file",
+              "src": "/D:/chromaDB/semanticSearchMapping_removeonly.csv",
+              "disabled": true
+            },
+            {
+              "key": "file",
+              "type": "file",
+              "src": "/D:/chromaDB/PL1_semanticSearchMapping_removeonly_Load_v2.csv"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:5858/loaddata",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5858",
+          "path": [
+            "loaddata"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "PL1-Preprocessor",
+      "id": "d4ffe1a5-9725-4546-b688-310915ff8b4a",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "file",
+              "type": "file",
+              "src": "/D:/BLUESCRIPT_DEMO/Dankse POC/Second POC/Codebase_Eng_1/Codebase_Eng/PL1 Modules/KNBS4001.PLI",
+              "disabled": true
+            },
+            {
+              "key": "workingDir",
+              "value": "D:\\BLUESCRIPT_DEMO\\End-2-EndTestData\\IntrimData\\WorkingDir\\PL2",
+              "type": "text"
+            },
+            {
+              "key": "discoverydb",
+              "value": "D:\\BLUESCRIPT_DEMO\\End-2-EndTestData\\IntrimData\\WorkingDir\\PL1\\GenApp_WithLatestChanges_GenAPP.db",
+              "type": "text"
+            },
+            {
+              "key": "file",
+              "type": "file",
+              "src": "/D:/BLUESCRIPT_DEMO/Dankse POC/Second POC/Codebase_Eng_1/Codebase_Eng/PL1 Modules/KNBAC010.PLI"
+            },
+            {
+              "key": "file",
+              "type": "file",
+              "src": "/D:/BLUESCRIPT_DEMO/Dankse POC/Second POC/Codebase_Eng_1/Codebase_Eng/PL1 Modules/KNBS4001.PLI",
+              "disabled": true
+            },
+            {
+              "key": "file",
+              "type": "file",
+              "src": "/D:/BLUESCRIPT_DEMO/Dankse POC/Second POC/Codebase_Eng_1/Codebase_Eng/PL1 Modules/KNHNV02.PLI",
+              "disabled": true
+            },
+            {
+              "key": "file",
+              "type": "file",
+              "src": "/D:/BLUESCRIPT_DEMO/Dankse POC/Second POC/Codebase_Eng_1/Codebase_Eng/PL1 Modules/KNSDI01.PLI",
+              "disabled": true
+            },
+            {
+              "key": "file",
+              "type": "file",
+              "src": "/D:/BLUESCRIPT_DEMO/Dankse POC/Second POC/Codebase_Eng_1/Codebase_Eng/PL1 Modules/KNPNV02.PLI",
+              "disabled": true
+            },
+            {
+              "key": "file",
+              "type": "file",
+              "src": "/D:/BLUESCRIPT_DEMO/Dankse POC/Second POC/runs/Knhnva2.PLI",
+              "disabled": true
+            },
+            {
+              "key": "file",
+              "type": "file",
+              "src": "/D:/BLUESCRIPT_DEMO/Dankse POC/callReplaceTest.txt",
+              "disabled": true
+            },
+            {
+              "key": "file",
+              "type": "file",
+              "src": "/D:/BLUESCRIPT_DEMO/Dankse POC/Second POC/Codebase_Eng_1/Codebase_Eng/PL1 Modules/KNHKO01.PLI",
+              "disabled": true
+            },
+            {
+              "key": "file",
+              "type": "file",
+              "src": "/C:/Users/jarvi/Downloads/Knhko01.cln",
+              "disabled": true
+            },
+            {
+              "key": "file",
+              "type": "file",
+              "src": "/D:/BLUESCRIPT_DEMO/Dankse POC/Second POC/runs/KNHKO01_MOD.PLI",
+              "disabled": true
+            },
+            {
+              "key": "file",
+              "type": "file",
+              "src": "/D:/BLUESCRIPT_DEMO/Dankse POC/Second POC/Codebase_Eng_1/Codebase_Eng/PL1 Modules/KNPMK01.PLI",
+              "disabled": true
+            },
+            {
+              "key": "file",
+              "type": "file",
+              "src": "/D:/BLUESCRIPT_DEMO/Dankse POC/Second POC/Codebase_Eng_1/Codebase_Eng/PL1 Modules/KNPTP01.PLI",
+              "disabled": true
+            },
+            {
+              "key": "file",
+              "type": "file",
+              "src": "/D:/BLUESCRIPT_DEMO/Dankse POC/Second POC/Codebase_Eng/Codebase_Eng/PL1 Modules/KNPNV02.PLI",
+              "disabled": true
+            },
+            {
+              "key": "file",
+              "type": "file",
+              "src": "/D:/BLUESCRIPT_DEMO/Dankse POC/Second POC/Codebase_Eng_1/DCLEntryStmtTest.txt",
+              "disabled": true
+            },
+            {
+              "key": "file",
+              "type": "file",
+              "src": "/D:/BLUESCRIPT_DEMO/Dankse POC/Second POC/Codebase_Eng_1/Codebase_Eng/PL1 Modules/KNPTP01.PLI",
+              "disabled": true
+            },
+            {
+              "key": "file",
+              "type": "file",
+              "src": "/D:/BLUESCRIPT_DEMO/Dankse POC/Second POC/Codebase_Eng_1/Codebase_Eng/PL1 Modules/KNHNVA2.PLI",
+              "disabled": true
+            },
+            {
+              "key": "file",
+              "type": "file",
+              "src": "/D:/BLUESCRIPT_DEMO/Dankse POC/doloopTest.txt",
+              "disabled": true
+            },
+            {
+              "key": "file",
+              "type": "file",
+              "src": "/D:/BLUESCRIPT_DEMO/Dankse POC/Second POC/Codebase_Eng_1/Codebase_Eng/PL1 Modules/KNHKO01.PLI",
+              "disabled": true
+            },
+            {
+              "key": "file",
+              "type": "file",
+              "src": "/D:/BLUESCRIPT_DEMO/Dankse POC/Second POC/Codebase_Eng_1/Codebase_Eng/PL1 Modules/KNPTP01.PLI",
+              "disabled": true
+            },
+            {
+              "key": "file",
+              "type": "file",
+              "src": "/D:/BLUESCRIPT_DEMO/Dankse POC/Second POC/Codebase_Eng_1/Codebase_Eng/PL1 Modules/KNHASA1.exp",
+              "disabled": true
+            },
+            {
+              "key": "file",
+              "type": "file",
+              "src": "/D:/BLUESCRIPT_DEMO/Dankse POC/test/selectcaseifelsetest.Pl1",
+              "disabled": true
+            },
+            {
+              "key": "file",
+              "type": "file",
+              "src": "/D:/BLUESCRIPT_DEMO/Dankse POC/Second POC/Full Code Share/KNBAC010/KNHNVA2.PLI",
+              "disabled": true
+            },
+            {
+              "key": "file",
+              "type": "file",
+              "src": "/D:/BLUESCRIPT_DEMO/Dankse POC/test/selectcasetest.PLI",
+              "disabled": true
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:3019/Preprocessor",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3019",
+          "path": [
+            "Preprocessor"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "PL/1-Borgcube",
+      "id": "2766adb2-c182-40fb-8f23-f69d5661abc0",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:7002/borgcube-1/?discoverydb=D:\\BLUESCRIPT_DEMO\\End-2-EndTestData\\IntrimData\\WorkingDir\\PL1\\GenApp_WithLatestChanges_GenAPP.db&convdir=D:\\BLUESCRIPT_DEMO\\End-2-EndTestData\\IntrimData\\WorkingDir\\PL2\\KNBAC010",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "7002",
+          "path": [
+            "borgcube-1",
+            ""
+          ],
+          "query": [
+            {
+              "key": "discoverydb",
+              "value": "D:\\BLUESCRIPT_DEMO\\End-2-EndTestData\\IntrimData\\WorkingDir\\PL1\\GenApp_WithLatestChanges_GenAPP.db"
+            },
+            {
+              "key": "convdir",
+              "value": "D:\\BLUESCRIPT_DEMO\\End-2-EndTestData\\IntrimData\\WorkingDir\\PL1\\KTUEO54",
+              "disabled": true
+            },
+            {
+              "key": "convdir",
+              "value": "D:\\BLUESCRIPT_DEMO\\End-2-EndTestData\\IntrimData\\WorkingDir\\PL2\\KNBS4001",
+              "disabled": true
+            },
+            {
+              "key": "convdir",
+              "value": "D:\\BLUESCRIPT_DEMO\\End-2-EndTestData\\IntrimData\\WorkingDir\\PL1\\KNBAC010",
+              "disabled": true
+            },
+            {
+              "key": "convdir",
+              "value": "D:\\BLUESCRIPT_DEMO\\End-2-EndTestData\\IntrimData\\WorkingDir\\PL1\\SelectTest",
+              "disabled": true
+            },
+            {
+              "key": "convdir",
+              "value": "D:\\BLUESCRIPT_DEMO\\End-2-EndTestData\\IntrimData\\WorkingDir\\PL1\\Knhnva2",
+              "disabled": true
+            },
+            {
+              "key": "convdir",
+              "value": "D:\\BLUESCRIPT_DEMO\\End-2-EndTestData\\IntrimData\\WorkingDir\\PL1\\callReplaceTest",
+              "disabled": true
+            },
+            {
+              "key": "convdir",
+              "value": "D:\\BLUESCRIPT_DEMO\\End-2-EndTestData\\IntrimData\\WorkingDir\\PL1\\KNHKO01",
+              "disabled": true
+            },
+            {
+              "key": "convdir",
+              "value": "D:\\BLUESCRIPT_DEMO\\End-2-EndTestData\\IntrimData\\WorkingDir\\PL1\\KNHKO01_MOD",
+              "disabled": true
+            },
+            {
+              "key": "convdir",
+              "value": "D:\\BLUESCRIPT_DEMO\\End-2-EndTestData\\IntrimData\\WorkingDir\\PL1\\KNPNV02",
+              "disabled": true
+            },
+            {
+              "key": "convdir",
+              "value": "D:\\BLUESCRIPT_DEMO\\End-2-EndTestData\\IntrimData\\WorkingDir\\PL1\\KNPMK01",
+              "disabled": true
+            },
+            {
+              "key": "convdir",
+              "value": "D:\\BLUESCRIPT_DEMO\\End-2-EndTestData\\IntrimData\\WorkingDir\\PL1\\KNPTP01",
+              "disabled": true
+            },
+            {
+              "key": "convdir",
+              "value": "D:\\BLUESCRIPT_DEMO\\End-2-EndTestData\\IntrimData\\WorkingDir\\PL1\\KNHNVA2",
+              "disabled": true
+            },
+            {
+              "key": "convdir",
+              "value": "D:\\BLUESCRIPT_DEMO\\End-2-EndTestData\\IntrimData\\WorkingDir\\PL1\\KNHASA1",
+              "disabled": true
+            },
+            {
+              "key": "convdir",
+              "value": "D:\\BLUESCRIPT_DEMO\\End-2-EndTestData\\IntrimData\\WorkingDir\\PL2\\KNBS4001",
+              "disabled": true
+            },
+            {
+              "key": "convdir",
+              "value": "D:\\BLUESCRIPT_DEMO\\End-2-EndTestData\\IntrimData\\WorkingDir\\PL2\\KNBS4001",
+              "disabled": true
+            },
+            {
+              "key": "convdir",
+              "value": "D:\\BLUESCRIPT_DEMO\\End-2-EndTestData\\IntrimData\\WorkingDir\\PL2\\KNBAC010"
+            },
+            {
+              "key": "convdir",
+              "value": "D:\\BLUESCRIPT_DEMO\\End-2-EndTestData\\IntrimData\\WorkingDir\\PL2\\KNHNVA2",
+              "disabled": true
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "PL1DiscoveryAnalyzer",
+      "id": "b6ac1540-3c41-47a3-81f3-93b88363f292",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "file",
+              "type": "file",
+              "src": "/D:/BLUESCRIPT_DEMO/Dankse POC/Second POC/Codebase_Eng/Codebase_Eng/PL1 Modules/KNYFEJL.PLI",
+              "disabled": true
+            },
+            {
+              "key": "dbPath",
+              "value": "D:\\BLUESCRIPT_DEMO\\End-2-EndTestData\\IntrimData\\WorkingDir\\PL1\\CC_AN_DANSKEE 8.db",
+              "type": "text"
+            },
+            {
+              "key": "copybookPath",
+              "value": "D:\\BLUESCRIPT_DEMO\\Dankse POC\\Second POC\\Codebase_Eng_1\\Codebase_Eng\\Includes",
+              "type": "text"
+            },
+            {
+              "key": "workingdir",
+              "value": "D:\\BLUESCRIPT_DEMO\\End-2-EndTestData\\IntrimData\\WorkingDir\\PL1",
+              "type": "text"
+            },
+            {
+              "key": "db2ddl",
+              "value": "D:\\BLUESCRIPT_DEMO\\Dankse POC\\Second POC\\Codebase_Eng\\Codebase_Eng\\Table DDL",
+              "type": "text"
+            },
+            {
+              "key": "file",
+              "type": "file",
+              "src": "/D:/BLUESCRIPT_DEMO/Dankse POC/Second POC/Codebase_Eng_1/Codebase_Eng/PL1 Modules/KNSSE03.PLI",
+              "disabled": true
+            },
+            {
+              "key": "file",
+              "type": "file",
+              "src": "/D:/BLUESCRIPT_DEMO/Dankse POC/Second POC/Codebase_Eng_1/Codebase_Eng/PL1 Modules/KNBS4001.PLI",
+              "disabled": true
+            },
+            {
+              "key": "file",
+              "type": "file",
+              "src": "/D:/BLUESCRIPT_DEMO/Dankse POC/test/Knbs4001.cln",
+              "disabled": true
+            },
+            {
+              "key": "file",
+              "type": "file",
+              "src": "/D:/BLUESCRIPT_DEMO/Dankse POC/Second POC/Full Code Share/KNBAC010/IENOTE2.PLI",
+              "disabled": true
+            },
+            {
+              "key": "file",
+              "type": "file",
+              "src": "/D:/BLUESCRIPT_DEMO/Dankse POC/Second POC/Full Code Share/KNBAC010/IEPOST0.PLI",
+              "disabled": true
+            },
+            {
+              "key": "file",
+              "type": "file",
+              "src": "/D:/BLUESCRIPT_DEMO/Dankse POC/Second POC/Full Code Share/KNBAC010/KNSSE01.PLI",
+              "disabled": true
+            },
+            {
+              "key": "file",
+              "type": "file",
+              "src": "/D:/BLUESCRIPT_DEMO/Dankse POC/Second POC/runs/IENOTE2.exp",
+              "disabled": true
+            },
+            {
+              "key": "file",
+              "type": "file",
+              "src": "/D:/BLUESCRIPT_DEMO/Dankse POC/Second POC/Full Code Share/KNBAC010/KNTRACE.PLI",
+              "disabled": true
+            },
+            {
+              "key": "file",
+              "type": "file",
+              "src": "/C:/Users/jarvi/Downloads/KNBS4001 1.PLI",
+              "disabled": true
+            },
+            {
+              "key": "file",
+              "type": "file",
+              "src": "/D:/BLUESCRIPT_DEMO/Dankse POC/Second POC/Full Code Share/KNBAC010/KNBAC010.PLI",
+              "disabled": true
+            },
+            {
+              "key": "file",
+              "type": "file",
+              "src": "/D:/BLUESCRIPT_DEMO/Dankse POC/test/test11.txt",
+              "disabled": true
+            },
+            {
+              "key": "file",
+              "type": "file",
+              "src": "/D:/BLUESCRIPT_DEMO/Dankse POC/Second POC/Full Code Share/KNBAC010/KNHNVA2.PLI"
+            },
+            {
+              "key": "file",
+              "type": "file",
+              "src": "/D:/BLUESCRIPT_DEMO/Dankse POC/test/selectcasetestif.pl1",
+              "disabled": true
+            },
+            {
+              "key": "file",
+              "type": "file",
+              "src": "/D:/BLUESCRIPT_DEMO/Dankse POC/Second POC/Full Code Share/KNBAC010/KNSDI01.PLI",
+              "disabled": true
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:6000/pl1DiscoveryAnalyzer",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "6000",
+          "path": [
+            "pl1DiscoveryAnalyzer"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "CobolArchVizParser",
+      "id": "1f4745b8-8d07-44a1-a371-e8873f1c5b53",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "file",
+              "type": "file",
+              "src": "/D:/BLUESCRIPT_DEMO/Dankse POC/Second POC/Full Code Share/Missing Components_2/USWERR83.CBL",
+              "disabled": true
+            },
+            {
+              "key": "workingdir",
+              "value": "D:\\BLUESCRIPT_DEMO\\End-2-EndTestData\\IntrimData\\WorkingDir\\PL1",
+              "type": "text"
+            },
+            {
+              "key": "db2ddl",
+              "value": "D:\\BLUESCRIPT_DEMO\\Dankse POC\\Second POC\\Codebase_Eng\\Codebase_Eng\\Table DDL",
+              "type": "text"
+            },
+            {
+              "key": "dbPath",
+              "value": "D:\\BLUESCRIPT_DEMO\\End-2-EndTestData\\IntrimData\\WorkingDir\\PL1\\GenApp_WithLatestChanges_GenAPP.db",
+              "type": "text"
+            },
+            {
+              "key": "copybookPath",
+              "value": "D:\\BLUESCRIPT_DEMO\\Dankse POC\\Second POC\\Codebase_Eng_1\\Codebase_Eng\\Copybook",
+              "type": "text"
+            },
+            {
+              "key": "file",
+              "type": "file",
+              "src": "/D:/BLUESCRIPT_DEMO/End-2-EndTestData/IBM Sourcecode/source/lgapdb01.cbl",
+              "disabled": true
+            },
+            {
+              "key": "copybookPath",
+              "value": "D:\\BLUESCRIPT_DEMO\\End-2-EndTestData\\IBM Sourcecode\\copybooks",
+              "type": "text",
+              "disabled": true
+            },
+            {
+              "key": "file",
+              "type": "file",
+              "src": "/D:/BLUESCRIPT_DEMO/End-2-EndTestData/CobolPgm/TESTJF10/TESTJF10.CBL",
+              "disabled": true
+            },
+            {
+              "key": "file",
+              "type": "file",
+              "src": "/D:/BLUESCRIPT_DEMO/Dankse POC/Second POC/Codebase_Eng_1/Codebase_Eng/COBOL/USEVENT1.CBL",
+              "disabled": true
+            },
+            {
+              "key": "file",
+              "type": "file",
+              "src": "/D:/BLUESCRIPT_DEMO/Dankse POC/Second POC/Codebase_Eng_1/Codebase_Eng/COBOL/USEVMFE1.CBL",
+              "disabled": true
+            },
+            {
+              "key": "file",
+              "type": "file",
+              "src": "/D:/BLUESCRIPT_DEMO/Dankse POC/Second POC/Codebase_Eng_1/Codebase_Eng/COBOL/USEVMFE2.CBL",
+              "disabled": true
+            },
+            {
+              "key": "file",
+              "type": "file",
+              "src": "/D:/BLUESCRIPT_DEMO/End-2-EndTestData/IBM Sourcecode/test/lgacdb02FlowTest.cbl"
+            },
+            {
+              "key": "file",
+              "type": "file",
+              "src": "/D:/BLUESCRIPT_DEMO/Dankse POC/Second POC/Codebase_Eng_1/Codebase_Eng/COBOL/USEVENT1.CBL",
+              "disabled": true
+            },
+            {
+              "key": "file",
+              "type": "file",
+              "src": "/D:/BLUESCRIPT_DEMO/Dankse POC/Second POC/Codebase_Eng_1/Codebase_Eng/COBOL/USMEMOF0.CBL",
+              "disabled": true
+            },
+            {
+              "key": "file",
+              "type": "file",
+              "src": "/D:/BLUESCRIPT_DEMO/Dankse POC/Second POC/Codebase_Eng_1/Codebase_Eng/COBOL/USMEMOG0.CBL",
+              "disabled": true
+            },
+            {
+              "key": "file",
+              "type": "file",
+              "src": "/D:/BLUESCRIPT_DEMO/Dankse POC/Second POC/Codebase_Eng_1/Codebase_Eng/COBOL/USWERR84.CBL",
+              "disabled": true
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:5000/cobolprocessor",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "cobolprocessor"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "runpod aitags",
+      "id": "849d326d-12ad-4374-81bc-19e53d35c75e",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://ekher7o8gjdzkl-11434.proxy.runpod.net/api/tags",
+          "protocol": "https",
+          "host": [
+            "ekher7o8gjdzkl-11434",
+            "proxy",
+            "runpod",
+            "net"
+          ],
+          "path": [
+            "api",
+            "tags"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "DDLExtractor",
+      "id": "111b43b3-739d-4ddf-8056-c2011e663762",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "db2ddl",
+              "value": "D:\\BLUESCRIPT_DEMO\\Dankse POC\\Second POC\\Codebase_Eng_1\\Codebase_Eng\\Table DDL",
+              "type": "text"
+            },
+            {
+              "key": "discoverydb",
+              "value": "D:\\BLUESCRIPT_DEMO\\End-2-EndTestData\\IntrimData\\WorkingDir\\PL1\\GenApp_WithLatestChanges_GenAPP.db",
+              "type": "text"
+            },
+            {
+              "key": "db2ddl",
+              "value": "D:\\BLUESCRIPT_DEMO\\Dankse POC\\Second POC\\Codebase_Eng_1\\Codebase_Eng\\testddl",
+              "type": "text",
+              "disabled": true
+            },
+            {
+              "key": "runtype",
+              "value": "CREATE",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:7000/ddlextractor",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "7000",
+          "path": [
+            "ddlextractor"
+          ],
+          "query": [
+            {
+              "key": "db2ddl",
+              "value": null,
+              "disabled": true
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "DDLExtractor ViewAliasProcessing",
+      "id": "85ad1822-17ae-44c2-903f-c0e28175f147",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "db2ddl",
+              "value": "D:\\BLUESCRIPT_DEMO\\Dankse POC\\Second POC\\Codebase_Eng_1\\Codebase_Eng\\Table DDL",
+              "type": "text",
+              "disabled": true
+            },
+            {
+              "key": "discoverydb",
+              "value": "D:\\BLUESCRIPT_DEMO\\End-2-EndTestData\\IntrimData\\WorkingDir\\PL1\\GenApp_WithLatestChanges_GenAPP.db",
+              "type": "text"
+            },
+            {
+              "key": "db2ddl",
+              "value": "C:\\Users\\jarvi\\Downloads\\DSG_COBOL2Java\\DSG_COBOL2Java\\DDL",
+              "type": "text"
+            },
+            {
+              "key": "runtype",
+              "value": "INDEX",
+              "type": "text"
+            },
+            {
+              "key": "fileType",
+              "value": "DDL",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:7000/ddlextractor",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "7000",
+          "path": [
+            "ddlextractor"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Natural-Preprocessor",
+      "id": "ed1002ca-91b9-4a0c-8444-c3b7a2069544",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "file",
+              "type": "file",
+              "src": "/D:/BLUESCRIPT_DEMO/Natural Codebase/First Day of the Month.txt",
+              "disabled": true
+            },
+            {
+              "key": "workingDir",
+              "value": "D:\\BLUESCRIPT_DEMO\\End-2-EndTestData\\IntrimData\\WorkingDir\\PL2",
+              "type": "text"
+            },
+            {
+              "key": "discoverydb",
+              "value": "D:\\BLUESCRIPT_DEMO\\End-2-EndTestData\\IntrimData\\WorkingDir\\PL1\\GenApp_WithLatestChanges_GenAPP.db",
+              "type": "text"
+            },
+            {
+              "key": "file",
+              "type": "file",
+              "src": "/D:/BLUESCRIPT_DEMO/Natural Codebase/First Sunday of the Month.txt",
+              "disabled": true
+            },
+            {
+              "key": "file",
+              "type": "file",
+              "src": "/D:/BLUESCRIPT_DEMO/Natural Codebase/Adding a first occurrence to an MU field.txt"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:4019/Preprocessor",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "4019",
+          "path": [
+            "Preprocessor"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "AutofixerJava",
+      "id": "cef19752-d4e6-4c37-a1e0-90c73273bee9",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5959/autoCompileFixer?maxattempt=5&inputdir=D:\\BLUESCRIPT_DEMO\\End-2-EndTestData\\Checking\\PrimeAmerica\\lgacdb01_SBT&programtype=java",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5959",
+          "path": [
+            "autoCompileFixer"
+          ],
+          "query": [
+            {
+              "key": "maxattempt",
+              "value": "5"
+            },
+            {
+              "key": "inputdir",
+              "value": "D:\\BLUESCRIPT_DEMO\\End-2-EndTestData\\Checking\\PrimeAmerica\\lgacdb01_SBT"
+            },
+            {
+              "key": "programtype",
+              "value": "java"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Javascript convertor",
+      "id": "fdff7ed5-1e3c-4a5d-8879-8b96223bf3a7",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": []
+        },
+        "url": {
+          "raw": "http://localhost:8001/javascriptcreate?inputdir=D:\\BLUESCRIPT_DEMO\\End-2-EndTestData\\IntrimData\\WorkingDir\\PL2\\lgaaowk&outputdir=D:\\BLUESCRIPT_DEMO\\End-2-EndTestData\\Checking\\javascript\\",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8001",
+          "path": [
+            "javascriptcreate"
+          ],
+          "query": [
+            {
+              "key": "inputdir",
+              "value": "D:\\BLUESCRIPT_DEMO\\End-2-EndTestData\\IntrimData\\WorkingDir\\PL2\\lgaaowk"
+            },
+            {
+              "key": "outputdir",
+              "value": "D:\\BLUESCRIPT_DEMO\\End-2-EndTestData\\Checking\\javascript\\"
+            }
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

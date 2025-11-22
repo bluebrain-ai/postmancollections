@@ -1,0 +1,650 @@
+{
+  "info": {
+    "_postman_id": "556cc594-c88f-45c1-8145-805a09ac1380",
+    "name": "Authorization methods",
+    "description": "# 🔐 Get started here\n\nPostman supports a range of authorization mechanisms to enable you to communicate securely with APIs.\n\nThis template contains examples of different types of authorization that are ready to be modified to fit your use case.\n\n- **Basic Auth:** This simple authorization method uses a username and password combination to grant access to API resources. Postman offers a built-in Basic Auth helper that makes it easy to include the required credentials in your API requests.\n    \n\n- **OAuth 1.0 & OAuth 2.0:** Postman supports both versions of the OAuth protocol, which involve complex flows including obtaining request tokens, user authorization, and exchanging tokens for access tokens. Postman streamlines this process by handling server-side interactions, managing tokens, and offering pre-built authorization helpers.\n    \n\n- **Bearer Token:** Commonly used with OAuth 2.0, this method involves sending a token in the request header to authenticate with the API.\n    \n\n- **API Key:** Postman supports API Key authorization, which requires including a unique key in the request headers or as a query parameter.\n    \n\n- **Digest Auth:** This method employs a challenge-response mechanism to ensure secure communication with APIs.\n    \n\n- **Hawk Authentication:** Postman supports the Hawk authorization method, which utilizes time-based, one-time-use tokens for secure API access.\n    \n\n## 🔖 **How to use this template**\n\n**Step 1:** Select the request for your relevant authorization type.\n\n**Step 2:** Check out the documentation for the selected request to learn more about the type of authorization and how to use it.\n\n**Step 3:** Complete the relevant details for your selected authorization type.\n\n(Note: The correct data values will be determined by your API on the server side. If you're using a third-party API, refer to the provider's documentation for more details about the required authorization type.)\n\n## ℹ️ Resources\n\n[Authorizing requests in Postman](https://learning.postman.com/docs/sending-requests/authorization/)",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "18396671"
+  },
+  "item": [
+    {
+      "name": "Basic Auth",
+      "id": "28780253-182b-4445-a6de-2ab41257183c",
+      "request": {
+        "auth": {
+          "type": "basic",
+          "basic": [
+            {
+              "key": "username",
+              "value": "example_username",
+              "type": "string"
+            },
+            {
+              "key": "password",
+              "value": "example_password",
+              "type": "string"
+            },
+            {
+              "key": "saveHelperData",
+              "type": "any"
+            },
+            {
+              "key": "showPassword",
+              "value": false,
+              "type": "boolean"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://httpbin.org/basic-auth/example_username/example_password",
+          "protocol": "https",
+          "host": [
+            "httpbin",
+            "org"
+          ],
+          "path": [
+            "basic-auth",
+            "example_username",
+            "example_password"
+          ]
+        },
+        "description": "This request uses Basic Auth to authenticate with an API.\n\n`httpbin.org` offers a Basic Auth demo endpoint, following the pattern `httpbin.org/basic-auth/{username}/{password}`. It then expects a Basic Auth header matching the `{username}` and `{password}` values to be included in the Request.\n\nTo see an authentication failure, head to the request's Authorization tab and try changing the username or password before sending the request again.\n\nTo use Basic Auth with your own API, just replace the Request URL with your endpoint. Head to the Authorization tab, enter the expected username and password for your API, and try sending the request again."
+      },
+      "response": []
+    },
+    {
+      "name": "Google OAuth 2.0",
+      "id": "161262db-418c-44b0-b8b5-8e4aa41bb082",
+      "request": {
+        "auth": {
+          "type": "oauth2",
+          "oauth2": [
+            {
+              "key": "accessToken",
+              "type": "any"
+            },
+            {
+              "key": "addTokenTo",
+              "value": "header",
+              "type": "string"
+            },
+            {
+              "key": "callBackUrl",
+              "type": "any"
+            },
+            {
+              "key": "authUrl",
+              "value": "https://accounts.google.com/o/oauth2/v2/auth",
+              "type": "string"
+            },
+            {
+              "key": "accessTokenUrl",
+              "value": "https://oauth2.googleapis.com/token",
+              "type": "string"
+            },
+            {
+              "key": "clientId",
+              "value": "{{googleClientId}}",
+              "type": "string"
+            },
+            {
+              "key": "clientSecret",
+              "value": "{{googleClientSecret}}",
+              "type": "string"
+            },
+            {
+              "key": "clientAuth",
+              "type": "any"
+            },
+            {
+              "key": "grantType",
+              "type": "any"
+            },
+            {
+              "key": "scope",
+              "value": "https://spreadsheets.google.com/feeds/",
+              "type": "string"
+            },
+            {
+              "key": "username",
+              "type": "any"
+            },
+            {
+              "key": "password",
+              "type": "any"
+            },
+            {
+              "key": "tokenType",
+              "type": "any"
+            },
+            {
+              "key": "redirectUri",
+              "type": "any"
+            },
+            {
+              "key": "refreshToken",
+              "type": "any"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://sheets.googleapis.com/v4/spreadsheets/{{googleSheetId}}",
+          "protocol": "https",
+          "host": [
+            "sheets",
+            "googleapis",
+            "com"
+          ],
+          "path": [
+            "v4",
+            "spreadsheets",
+            "{{googleSheetId}}"
+          ]
+        },
+        "description": "This request is ready to access a Google Sheet document via the Google Sheets API, authenticating with Google via interactive OAuth 2.0.\n\nIt requires three Collection Variables to be filled:\n\n- `googleClientId` - a Google API client ID\n- `googleClientSecret` - a Google API client secret\n- `googleSheetId` - ID of the Google Sheet to fetch\n    \n\nOnce you've populated these Collection Variables, just hit \"Get New Access Token\" in the Request Authorization tab to start the interactive OAuth 2.0 flow. Postman will remember the token returned, and use it when you send the Request to fetch a Sheet."
+      },
+      "response": []
+    },
+    {
+      "name": "Github Bearer token",
+      "id": "fa970e14-56f4-453f-bb5a-f40b4e01c031",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{githubAccessToken}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"name\": \"Created with Postman\",\n    \"private\": true\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://api.github.com/user/repos",
+          "protocol": "https",
+          "host": [
+            "api",
+            "github",
+            "com"
+          ],
+          "path": [
+            "user",
+            "repos"
+          ]
+        },
+        "description": "This request uses a Personal Access Token as a Bearer Token to authenticate with the GitHub API and create a new private repository.\n\nTo start, you'll need to follow the [steps to generate a Personal Access Token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) on GitHub. You can generate a **classic token with 'repo' scope** to use with this request.\n\nOnce your token is generated, you must copy it immediately as it won't be shown again. Then go to this collection's \"variables\" tab and paste it as the current value for the `githubAccessToken` variable.\n\nView the Authorization tab for this request. Note it uses the 'Bearer token' auth method, and the value is pre-filled to reference the `githubAccessToken` variable we've set our Personal Access Token in.\n\nIf you want, adjust the name of the repository to be created in the 'Body' tab. Then hit 'Send' to create a new repository using Bearer token authentication."
+      },
+      "response": []
+    },
+    {
+      "name": "Generate signed JWT",
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "// JWT generation script adapted from",
+              "// https://gist.github.com/corbanb/db03150abbe899285d6a86cc480f674d",
+              "",
+              "var jwtSecret = pm.collectionVariables.get('jwtSecret') || ''",
+              "",
+              "// Set headers for JWT",
+              "var header = {",
+              "\t'typ': 'JWT',",
+              "\t'alg': 'HS256'",
+              "};",
+              "",
+              "// Prepare timestamp in seconds",
+              "var currentTimestamp = Math.floor(Date.now() / 1000)",
+              "",
+              "var data = {",
+              "    // include any additional data for the JWT payload here",
+              "    // you may add registered claims like `iss` (issuer), `sub` (subject)",
+              "    // or other public/private claims",
+              "    // see https://jwt.io/introduction for more information on the content of JWTs",
+              "\t'iat': currentTimestamp,",
+              "\t'exp': currentTimestamp + 30, // expiry time is 30 seconds from time of creation",
+              "}",
+              "",
+              "",
+              "function base64url(source) {",
+              "    // Encode in classical base64",
+              "    encodedSource = CryptoJS.enc.Base64.stringify(source)",
+              "    ",
+              "    // Remove padding equal characters",
+              "    encodedSource = encodedSource.replace(/=+$/, '')",
+              "    ",
+              "    // Replace characters according to base64url specifications",
+              "    encodedSource = encodedSource.replace(/\\+/g, '-')",
+              "    encodedSource = encodedSource.replace(/\\//g, '_')",
+              "    ",
+              "    return encodedSource",
+              "}",
+              "",
+              "// encode header",
+              "var stringifiedHeader = CryptoJS.enc.Utf8.parse(JSON.stringify(header))",
+              "var encodedHeader = base64url(stringifiedHeader)",
+              "",
+              "// encode data",
+              "var stringifiedData = CryptoJS.enc.Utf8.parse(JSON.stringify(data))",
+              "var encodedData = base64url(stringifiedData)",
+              "",
+              "// build token",
+              "var token = `${encodedHeader}.${encodedData}`",
+              "",
+              "// sign token",
+              "var signature = CryptoJS.HmacSHA256(token, jwtSecret)",
+              "signature = base64url(signature)",
+              "var signedToken = `${token}.${signature}`",
+              "",
+              "pm.variables.set('jwtSigned', signedToken)",
+              "console.log('Signed and encoded JWT', signedToken)",
+              ""
+            ]
+          }
+        }
+      ],
+      "id": "91b85791-2691-453e-8262-c8ae1754231f",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{jwtSigned}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "https://postman-echo.com/post",
+          "protocol": "https",
+          "host": [
+            "postman-echo",
+            "com"
+          ],
+          "path": [
+            "post"
+          ]
+        },
+        "description": "This request uses a pre-request script to generate, encode, and sign a JWT (JSON Web Token). This token is sent as a Bearer token authorization header.\n\nThis allows sending requests to a JWT-authenticated API you own or have the signing secret for without manually generating tokens eg. through an auth flow.\n\nSet the `jwtSecret` collection variable's current value to your signing secret to get started.\n\nYou can also modify the Pre-request Script to include additional data in the JWT payload, such as `iss` (issuer) or `sub` (subject) fields."
+      },
+      "response": []
+    },
+    {
+      "name": "API Key",
+      "id": "14a54653-16af-424e-a663-6ff70341d23b",
+      "request": {
+        "auth": {
+          "type": "apikey",
+          "apikey": [
+            {
+              "key": "key",
+              "value": "api_key",
+              "type": "string"
+            },
+            {
+              "key": "value",
+              "value": "{{nasaApiKey}}",
+              "type": "string"
+            },
+            {
+              "key": "in",
+              "value": "query",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://api.nasa.gov/planetary/apod",
+          "protocol": "https",
+          "host": [
+            "api",
+            "nasa",
+            "gov"
+          ],
+          "path": [
+            "planetary",
+            "apod"
+          ]
+        },
+        "description": "This request uses API Key authentication. The \"API Key\" Postman Authorization option is used to set the key and value to be included as a query parameter. These can also be included as a header for APIs expecting the key there.\n\nTo get started, visit [https://api.nasa.gov/](https://api.nasa.gov/) to get an API key. Set the `nasaApiKey` collection variable to the key you are given."
+      },
+      "response": []
+    },
+    {
+      "name": "Hawk auth",
+      "id": "35fd54fa-8cf7-4d6d-b54c-34f53b3dd2d0",
+      "request": {
+        "auth": {
+          "type": "hawk",
+          "hawk": [
+            {
+              "key": "authId",
+              "value": "{{hawkId}}",
+              "type": "string"
+            },
+            {
+              "key": "authKey",
+              "value": "{{hawkKey}}",
+              "type": "string"
+            },
+            {
+              "key": "algorithm",
+              "value": "sha256",
+              "type": "string"
+            },
+            {
+              "key": "user",
+              "type": "any"
+            },
+            {
+              "key": "saveHelperData",
+              "type": "any"
+            },
+            {
+              "key": "nonce",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "key": "extraData",
+              "type": "any"
+            },
+            {
+              "key": "appId",
+              "type": "any"
+            },
+            {
+              "key": "delegation",
+              "type": "any"
+            },
+            {
+              "key": "timestamp",
+              "type": "any"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://postman-echo.com/auth/hawk",
+          "protocol": "https",
+          "host": [
+            "postman-echo",
+            "com"
+          ],
+          "path": [
+            "auth",
+            "hawk"
+          ]
+        },
+        "description": "This request demonstrates authorizing against a Hawk Authentication protected endpoint. [Hawk authentication](https://github.com/hueniverse/hawk) is a widely used protocol for protecting API endpoints. One of Hawk's main goals is to enable HTTP authentication for services that do not use TLS (although it can be used in conjunction with TLS as well).\n\nThis request is set up with a Hawk auth ID and Key valid for `https://postman-echo.com/auth/hawk`. The ID and Key can be changed in the collection variables when updating the request to point to another endpoint.\n\nAdditional Hawk auth values can be set in ther request's Authorization tab, but Postman generates defaults when left blank."
+      },
+      "response": []
+    },
+    {
+      "name": "Digest auth",
+      "id": "7b476c14-8143-4979-8338-897e88096d77",
+      "request": {
+        "auth": {
+          "type": "digest",
+          "digest": [
+            {
+              "key": "algorithm",
+              "value": "MD5",
+              "type": "string"
+            },
+            {
+              "key": "username",
+              "value": "{{digestUsername}}",
+              "type": "string"
+            },
+            {
+              "key": "realm",
+              "type": "any"
+            },
+            {
+              "key": "password",
+              "value": "{{digestPassword}}",
+              "type": "string"
+            },
+            {
+              "key": "nonce",
+              "type": "any"
+            },
+            {
+              "key": "nonceCount",
+              "type": "any"
+            },
+            {
+              "key": "clientNonce",
+              "type": "any"
+            },
+            {
+              "key": "opaque",
+              "type": "any"
+            },
+            {
+              "key": "qop",
+              "type": "any"
+            },
+            {
+              "key": "disableRetryRequest",
+              "type": "any"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://postman-echo.com/digest-auth",
+          "protocol": "https",
+          "host": [
+            "postman-echo",
+            "com"
+          ],
+          "path": [
+            "digest-auth"
+          ]
+        },
+        "description": "This request authorizes against a Digest auth protected endpoint.\n\nDigest auth requires multiple steps. The protected resource is requested, and the server returns a 401 Unauthorized response with a \"nonce\". The client must then hash the Username, Password, and nonce, and return them to the server in another request for the protected resource. Postman handles this flow automatically when using the \"Digest Auth\" helper, so you only need to provide the Username and Password.\n\nTo customize the request, update the URL to point to your chosen endpoint and modify the `digestUsername` and `digestPassword` collection variables."
+      },
+      "response": []
+    },
+    {
+      "name": "OAuth 1.0",
+      "id": "b0f5d59b-9424-4095-b180-c2db86734bc2",
+      "request": {
+        "auth": {
+          "type": "oauth1",
+          "oauth1": [
+            {
+              "key": "consumerKey",
+              "value": "{{oauth1Key}}",
+              "type": "string"
+            },
+            {
+              "key": "consumerSecret",
+              "value": "{{oauth1Secret}}",
+              "type": "string"
+            },
+            {
+              "key": "token",
+              "type": "any"
+            },
+            {
+              "key": "tokenSecret",
+              "type": "any"
+            },
+            {
+              "key": "signatureMethod",
+              "value": "HMAC-SHA1",
+              "type": "string"
+            },
+            {
+              "key": "timestamp",
+              "type": "any"
+            },
+            {
+              "key": "nonce",
+              "type": "any"
+            },
+            {
+              "key": "version",
+              "value": "1.0",
+              "type": "string"
+            },
+            {
+              "key": "realm",
+              "type": "any"
+            },
+            {
+              "key": "addParamsToHeader",
+              "value": false,
+              "type": "boolean"
+            },
+            {
+              "key": "autoAddParam",
+              "type": "any"
+            },
+            {
+              "key": "addEmptyParamsToSign",
+              "value": false,
+              "type": "boolean"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://postman-echo.com/oauth1",
+          "protocol": "https",
+          "host": [
+            "postman-echo",
+            "com"
+          ],
+          "path": [
+            "oauth1"
+          ]
+        },
+        "description": "This request authorizes against an OAuth 1.0 protected endpoint using Postman's OAuth 1.0 auth helper. OAuth is often used for one service to access protected resources hosted by another service on a user's behalf.\n\nTo customize the request, update the URL to point to your chosen endpoint and modify the `oauth1Key` and `oauth1Secret` collection variables."
+      },
+      "response": []
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "id": "ff8f8bc6-5c96-473c-9d64-e13bbe680ba2",
+      "key": "googleSheetId",
+      "value": "Google sheet id",
+      "type": "string"
+    },
+    {
+      "id": "19cfce28-b7ce-4797-982b-955374ff050e",
+      "key": "googleClientId",
+      "value": "Google client id",
+      "type": "string"
+    },
+    {
+      "id": "1196e5f8-31b5-4e28-ae80-c05274bd3a62",
+      "key": "googleClientSecret",
+      "value": "Google client secret",
+      "type": "string"
+    },
+    {
+      "id": "79ee9bce-fd88-4cec-9916-a25cdc7dd733",
+      "key": "githubAccessToken",
+      "value": "Github Personal Access Token",
+      "type": "string"
+    },
+    {
+      "id": "3bfc4f6a-c479-4e62-94e0-bf26d698ffd0",
+      "key": "jwtSecret",
+      "value": "JWT signing secret",
+      "type": "string"
+    },
+    {
+      "id": "02c87ef9-2f00-472f-b11c-25ac1059b219",
+      "key": "nasaApiKey",
+      "value": "NASA API Key",
+      "type": "string"
+    },
+    {
+      "id": "dcf81c3e-3e8e-4833-abae-b4954b289286",
+      "key": "hawkId",
+      "value": "dh37fgj492je",
+      "type": "string"
+    },
+    {
+      "id": "d3eb211c-202f-4009-9fa5-69c3e0d3d1fd",
+      "key": "hawkKey",
+      "value": "werxhqb98rpaxn39848xrunpaw3489ruxnpa98w4rxn",
+      "type": "string"
+    },
+    {
+      "id": "59943cec-b18e-4cb5-9468-e52d2de671ee",
+      "key": "digestUsername",
+      "value": "postman",
+      "type": "string"
+    },
+    {
+      "id": "7fe02a1c-41a6-4892-9043-14a764023f1c",
+      "key": "digestPassword",
+      "value": "password",
+      "type": "string"
+    },
+    {
+      "id": "f92f2155-cc87-48f1-94a0-16045de143fe",
+      "key": "oauth1Key",
+      "value": "RKCGzna7bv9YD57c",
+      "type": "string"
+    },
+    {
+      "id": "d7ee4ae1-da5d-4c53-981e-c4fb68d940bb",
+      "key": "oauth1Secret",
+      "value": "D+EdQ-gs$-%@2Nu7",
+      "type": "string"
+    }
+  ]
+}
